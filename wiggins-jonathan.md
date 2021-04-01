@@ -19,6 +19,8 @@ Phoenix, AZ 85003<br>
 **Coding**: Python, Javascript, Bash, Perl, Go<br>
 **Human**: English, Spanish<br>
 
+---
+
 ### Experience
 **State Farm** _Software Developer III_ 2018 - Present<br>
 * Part of the State Farm IaaS Cloud Solutions team in charge of building & maintaining custom solutions which automate & orchestrate complex tasks for enterprise business partners.<br>
