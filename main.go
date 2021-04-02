@@ -43,7 +43,7 @@ func main() {
     if err != nil { fmt.Println("Error reading", input) }
 
     reader  := bytes.NewReader(input)
-    html    := NewMarkdown(reader)
+    html    := md2html(reader)
 
     file := "index.html"
     f, err := os.Create(file)
@@ -54,7 +54,7 @@ func main() {
     if err != nil { fmt.Println("Error writing html to file") }
 }
 
-func NewMarkdown(input io.Reader) string {
+func md2html(input io.Reader) string {
 
     buf := bytes.NewBuffer(nil)
 
