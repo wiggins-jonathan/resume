@@ -14,15 +14,16 @@ import (
 // Globals for regexp. Compiling them outside of any loops is more efficient
 var (
     r = regexp.MustCompile
-    boldItalicReg = r(`\*\*\*(.*?)\*\*\*`)
-    boldReg       = r(`\*\*(.*?)\*\*`)
-    italicReg     = r(`\*(.*?)\*`)
-    strikeReg     = r(`\~\~(.*?)\~\~`)
-    underscoreReg = r(`__(.*?)__`)
-    anchorReg     = r(`\[(.*?)\]\((.*?)\)[^\)]`)
-    escapeReg     = r(`^\>(\s|)`)
-    blockquoteReg = r(`\&gt\;(.*?)$`)
-    backtipReg    = r("`(.*?)`")
+    boldItalicReg   = r(`\*\*\*(.*?)\*\*\*`)
+    boldReg         = r(`\*\*(.*?)\*\*`)
+    italicReg       = r(`\*(.*?)\*`)
+    strikeReg       = r(`\~\~(.*?)\~\~`)
+    underscoreReg   = r(`__(.*?)__`)
+    anchorReg       = r(`\[(.*?)\]\((.*?)\)[^\)]`)
+    escapeReg       = r(`^\>(\s|)`)
+    blockquoteReg   = r(`\&gt\;(.*?)$`)
+    backtipReg      = r("`(.*?)`")
+    hrReg           = r(`---|___|\*\*\*`)
 
     h1Reg = r(`^#(\s|)(.*?)$`)
     h2Reg = r(`^##(\s|)(.*?)$`)
@@ -81,6 +82,8 @@ func NewMarkdown(input io.Reader) string {
         line = blockquoteReg.ReplaceAll(line, []byte(`<blockquote>$1</blockquote>`))
         // wrap the content of backticks inside of "<code>" tags
         line = backtipReg.ReplaceAll(line, []byte(`<code>$1</code>`))
+        // Convert horizontal rule
+        line = hrReg.ReplaceAll(line, []byte(`<hr>`))
         // convert headings
         if line[0] == '#' {
 
