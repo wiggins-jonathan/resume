@@ -14,9 +14,9 @@ import (
 // Globals for regexp. Compiling them outside of any loops is more efficient
 var (
     r = regexp.MustCompile
-    boldItalicReg   = r(`\*\*\*(.*?)\*\*\*`)
     boldReg         = r(`\*\*(.*?)\*\*`)
-    italicReg       = r(`\*(.*?)\*`)
+    italicReg       = r(`_(.*?)_`)
+    boldItalicReg   = r(`\*\*_(.*?)_\*\*`)
     strikeReg       = r(`\~\~(.*?)\~\~`)
     underscoreReg   = r(`__(.*?)__`)
     anchorReg       = r(`\[(.*?)\]\((.*?)\)[^\)]`)
@@ -35,7 +35,7 @@ var (
 
 func main() {
     if len(os.Args) < 2 {
-        fmt.Println("You must specify a file to parse")
+        fmt.Println("Please specify a .md file to parse")
         os.Exit(1)
     }
 
