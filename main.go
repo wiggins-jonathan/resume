@@ -35,23 +35,23 @@ var (
 
 func main() {
     if len(os.Args) < 2 {
-        fmt.Println("Please specify a .md file to parse")
+        fmt.Println("Please specify a .md file to parse.")
         os.Exit(1)
     }
 
     input, err := ioutil.ReadFile(os.Args[1])
-    if err != nil { fmt.Println("Error reading", input) }
+    checkError("Error reading .md file.", err)
 
     reader  := bytes.NewReader(input)
     html    := md2html(reader)
 
-    file := "index.html"
-    f, err := os.Create(file)
-    if err != nil { fmt.Println("Error creating", file) }
+    file    := "index.html"
+    f, err  := os.Create(file)
     defer f.Close()
+    checkError("Error creating index.html.", err)
 
     _, err = io.WriteString(f, html)
-    if err != nil { fmt.Println("Error writing html to file") }
+    checkError("Error writing html to file.", err)
 }
 
 func md2html(input io.Reader) string {
@@ -107,4 +107,11 @@ func md2html(input io.Reader) string {
         buf.WriteByte('\n')
     }
     return buf.String()
+}
+
+func checkError(message string, err error) {
+    if err != nil {
+        fmt.Println(message, err)
+        os.Exit(1)
+    }
 }
