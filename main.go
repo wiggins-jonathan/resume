@@ -25,12 +25,12 @@ var (
     backtipReg      = r("`(.*?)`")
     hrReg           = r(`---|___|\*\*\*`)
 
-    h1Reg = r(`^#(\s)(.*?)$`)
-    h2Reg = r(`^##(\s)(.*?)$`)
-    h3Reg = r(`^###(\s)(.*?)$`)
-    h4Reg = r(`^####(\s)(.*?)$`)
-    h5Reg = r(`^#####(\s)(.*?)$`)
-    h6Reg = r(`^######(\s)(.*?)$`)
+    h1Reg = r(`^#\s(.*?)$`)
+    h2Reg = r(`^##\s(.*?)$`)
+    h3Reg = r(`^###\s(.*?)$`)
+    h4Reg = r(`^####\s(.*?)$`)
+    h5Reg = r(`^#####\s(.*?)$`)
+    h6Reg = r(`^######\s(.*?)$`)
 )
 
 func main() {
@@ -89,12 +89,12 @@ func md2html(input io.Reader) string {
         if line[0] == '#' {
             count := bytes.Count(line, []byte(`#`))
             switch count {
-            case 1: line = h1Reg.ReplaceAll(line, []byte(`<h1>$2</h1>`))
-            case 2: line = h2Reg.ReplaceAll(line, []byte(`<h2>$2</h2>`))
-            case 3: line = h3Reg.ReplaceAll(line, []byte(`<h3>$2</h3>`))
-            case 4: line = h4Reg.ReplaceAll(line, []byte(`<h4>$2</h4>`))
-            case 5: line = h5Reg.ReplaceAll(line, []byte(`<h5>$2</h5>`))
-            case 6: line = h6Reg.ReplaceAll(line, []byte(`<h6>$2</h6>`))
+            case 1: line = h1Reg.ReplaceAll(line, []byte(`<h1>$1</h1>`))
+            case 2: line = h2Reg.ReplaceAll(line, []byte(`<h2>$1</h2>`))
+            case 3: line = h3Reg.ReplaceAll(line, []byte(`<h3>$1</h3>`))
+            case 4: line = h4Reg.ReplaceAll(line, []byte(`<h4>$1</h4>`))
+            case 5: line = h5Reg.ReplaceAll(line, []byte(`<h5>$1</h5>`))
+            case 6: line = h6Reg.ReplaceAll(line, []byte(`<h6>$1</h6>`))
             }
         }
         buf.Write(line)
