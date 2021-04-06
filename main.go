@@ -14,16 +14,16 @@ import (
 // Globals for regexp. Compiling them outside of any loops is more efficient
 var (
     r = regexp.MustCompile
-    boldReg         = r(`\*\*(.*?)\*\*`)
-    italicReg       = r(`_(.*?)_`)
-    boldItalicReg   = r(`\*\*_(.*?)_\*\*`)
-    strikeReg       = r(`\~\~(.*?)\~\~`)
-    underscoreReg   = r(`__(.*?)__`)
-    anchorReg       = r(`\[(.*?)\]\((.*?)\)[^\)]`)
-    escapeReg       = r(`^\>(\s)`)
-    blockquoteReg   = r(`\&gt\;(.*?)$`)
-    backtipReg      = r("`(.*?)`")
-    hrReg           = r(`---|___|\*\*\*`)
+    boldReg             = r(`\*\*(.*?)\*\*`)
+    italicReg           = r(`_(.*?)_`)
+    boldItalicReg       = r(`\*\*_(.*?)_\*\*`)
+    strikeReg           = r(`\~\~(.*?)\~\~`)
+    underscoreReg       = r(`__(.*?)__`)
+    anchorReg           = r(`\[(.*?)\]\((.*?)\)[^\)]`)
+    escapeReg           = r(`^\>(\s)`)
+    blockquoteReg       = r(`\&gt\;(.*?)$`)
+    backtipReg          = r("`(.*?)`")
+    horizontalRuleReg   = r(`---|___|\*\*\*`)
 
     h1Reg = r(`^#\s(.*?)$`)
     h2Reg = r(`^##\s(.*?)$`)
@@ -84,7 +84,7 @@ func md2html(input io.Reader) string {
         // wrap the content of backticks inside of "<code>" tags
         line = backtipReg.ReplaceAll(line, []byte(`<code>$1</code>`))
         // Convert horizontal rule
-        line = hrReg.ReplaceAll(line, []byte(`<hr>`))
+        line = horizontalRuleReg.ReplaceAll(line, []byte(`<hr>`))
         // convert headings
         if line[0] == '#' {
             count := bytes.Count(line, []byte(`#`))
