@@ -19,7 +19,7 @@ var (
     boldItalicReg       = r(`\*\*_(.*?)_\*\*`)
     strikeReg           = r(`\~\~(.*?)\~\~`)
     underscoreReg       = r(`__(.*?)__`)
-    anchorReg           = r(`\[(.*?)\]\((.*?)\)[^\)]`)
+    anchorReg           = r(`\[(.*?)\]\((.*?)\)`)
     escapeReg           = r(`^\>(\s)`)
     blockquoteReg       = r(`\&gt\;(.*?)$`)
     backtipReg          = r("`(.*?)`")
