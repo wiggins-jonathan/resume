@@ -31,6 +31,8 @@ var (
     h4Reg = r(`^####\s(.*?)$`)
     h5Reg = r(`^#####\s(.*?)$`)
     h6Reg = r(`^######\s(.*?)$`)
+
+    unorderedListReg = r(`^[-|\*|\+]\s(.*?)$`)
 )
 
 func main() {
