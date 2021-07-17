@@ -24,6 +24,7 @@ var (
     blockquoteReg       = r(`\&gt\;(.*?)$`)
     backtipReg          = r("`(.*?)`")
     horizontalRuleReg   = r(`---|___|\*\*\*`)
+    ampersandReg        = r(`&`)
 
     h1Reg = r(`^#\s(.*?)$`)
     h2Reg = r(`^##\s(.*?)$`)
@@ -87,6 +88,8 @@ func md2html(input io.Reader) string {
         line = backtipReg.ReplaceAll(line, []byte(`<code>$1</code>`))
         // Convert horizontal rule
         line = horizontalRuleReg.ReplaceAll(line, []byte(`<hr>`))
+        // Convert ampersands
+        line = ampersandReg.ReplaceAll(line, []byte(`&amp`))
         // convert headings
         if line[0] == '#' {
             count := bytes.Count(line, []byte(`#`))
