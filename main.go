@@ -102,6 +102,10 @@ func md2html(input io.Reader) string {
             case 6: line = h6Reg.ReplaceAll(line, []byte(`<h6>$1</h6>`))
             }
         }
+        // Convert unordered lists
+        if line[0] == '*' || line[0] == '-' || line[0] == '+' {
+            line = unorderedListReg.ReplaceAll(line, []byte(`<ul><li>$1</li></ul>`))
+        }
         buf.Write(line)
         buf.WriteByte('\n')
     }

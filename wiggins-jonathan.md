@@ -23,23 +23,23 @@ Phoenix, AZ 85003<br>
 
 ### Experience
 **State Farm** _Software Developer III_ 2018 - Present<br>
-* Part of the State Farm IaaS Cloud Solutions team in charge of building & maintaining custom solutions which automate & orchestrate complex tasks for enterprise business partners.<br>
-* Use multiple scripting languages, frameworks, & APIs to automate the creation, destruction, maintenance & upgrade of servers, containers, & virtualized systems.<br>
-* Use kanban, agile, & scrum to coordinate work between team members & other teams.<br>
-* Our Team saved State Farm $30 million dollars through automation in 2018.<br>
+* Part of the State Farm IaaS Cloud Solutions team in charge of building & maintaining custom solutions which automate & orchestrate complex tasks for enterprise business partners.
+* Use multiple scripting languages, frameworks, & APIs to automate the creation, destruction, maintenance & upgrade of servers, containers, & virtualized systems.
+* Use kanban, agile, & scrum to coordinate work between team members & other teams.
+* Our Team saved State Farm $30 million dollars through automation in 2018.
 
 **Ascend Learning** _Operations Lead_ 2014 - 2017<br>
-* Part of a team that designed & maintained an e-commerce site using Javascript, Python, PostgreSQL, Docker, AWS, & BrainTree APIs, & FedEx APIs that produced $20MM in revenue for 2016.<br>
-* Produced interactive web dashboards for management using HTML, CSS, SQL, Flask, & Docker.<br>
-* Tracked & analyzed call flows, abandon rates, & services levels in a call center environment.<br>
-* Created & maintained  a kanban-based inventory & shipping system for the Shipping team.<br>
-* In charge of coordinating problem tickets for our Saas / PaaS sites using Salesforce, Jira, & Asana.<br>
-* Won 2 “Employee of the Month” awards in 2016. First employee to do so in a single year.<br>
+* Part of a team that designed & maintained an e-commerce site using Javascript, Python, PostgreSQL, Docker, AWS, & BrainTree APIs, & FedEx APIs that produced $20MM in revenue for 2016.
+* Produced interactive web dashboards for management using HTML, CSS, SQL, Flask, & Docker.
+* Tracked & analyzed call flows, abandon rates, & services levels in a call center environment.
+* Created & maintained  a kanban-based inventory & shipping system for the Shipping team.
+* In charge of coordinating problem tickets for our Saas / PaaS sites using Salesforce, Jira, & Asana.
+* Won 2 “Employee of the Month” awards in 2016. First employee to do so in a single year.
 
 **Upwork.com** _Software Contractor_ 2011-2013<br>
-* Created websites using Flask, html, css, Javascript, & PostgreSQL. Hosted with Docker & AWS.<br>
-* Explored & visualized data using, Excel, VBA, Python, Pandas, & Matplotlib.<br>
-* Unlocked, rooted, & modded Android & iOS devices for end-users using Linux, Magisk, & TWRP.<br>
+* Created websites using Flask, html, css, Javascript, & PostgreSQL. Hosted with Docker & AWS.
+* Explored & visualized data using, Excel, VBA, Python, Pandas, & Matplotlib.
+* Unlocked, rooted, & modded Android & iOS devices for end-users using Linux, Magisk, & TWRP.
 
 ---
 
