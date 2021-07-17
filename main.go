@@ -105,7 +105,7 @@ func md2html(input io.Reader) string {
     return buf.String()
 }
 
-func checkError(message string, err error) {
+func checkError(message interface{}, err error) {
     if err != nil {
         fmt.Println(message, err)
         os.Exit(1)
