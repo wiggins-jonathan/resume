@@ -16,8 +16,8 @@ Phoenix, AZ 85003<br>
 **Databases**: MySQL, PostgreSQL, Sloany, SQLAlchemy, MongoDB, Redis.<br>
 **Frameworks**: Numpy, Pandas, Matplotlib, Beautiful Soup, Flask, JQuery, React.<br>
 **Data Analysis & Visualization**: Excel, Jupyter-Notebooks, Grafana/Prometheus, Google Analytics.<br>
-**Coding**: Python, Javascript, Bash, Perl, Go<br>
-**Human**: English, Spanish<br>
+**Coding Languages**: Python, Javascript, Bash, Perl, Go<br>
+**Human Languages**: English, Spanish<br>
 
 ---
 
@@ -25,10 +25,11 @@ Phoenix, AZ 85003<br>
 **State Farm** _Software Developer III_ 2018 - Present<br>
 * Part of the State Farm IaaS Cloud Solutions team in charge of building & maintaining custom solutions which automate & orchestrate complex tasks for enterprise business partners.
 * Use multiple scripting languages, frameworks, & APIs to automate the creation, destruction, maintenance & upgrade of servers, containers, & virtualized systems.
+* Routinely save the company greater than 30 million dollars every year through automation.
+* Oversaw the modernization of a monolithic self-hosted web app from jquery & Perl to microservices in the cloud using React & Go
 * Use kanban, agile, & scrum to coordinate work between team members & other teams.
-* Our Team saved State Farm $30 million dollars through automation in 2018.
 
-**Ascend Learning** _Operations Lead_ 2014 - 2017<br>
+**Ascend Learning** _Operations Analyst Lead_ 2014 - 2017<br>
 * Part of a team that designed & maintained an e-commerce site using Javascript, Python, PostgreSQL, Docker, AWS, & BrainTree APIs, & FedEx APIs that produced $20MM in revenue for 2016.
 * Produced interactive web dashboards for management using HTML, CSS, SQL, Flask, & Docker.
 * Tracked & analyzed call flows, abandon rates, & services levels in a call center environment.
