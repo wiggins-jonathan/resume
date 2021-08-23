@@ -9,7 +9,15 @@ import (
     "io"
     "os"
     "fmt"
+    "path/filepath"
+    "html/template"
+    "net/http"
 )
+
+type Webpage struct {
+    Title   string
+    Body    template.HTML
+}
 
 // Globals for regexp. Compiling them outside of any loops is more efficient
 var (
@@ -36,19 +44,6 @@ var (
     unorderedListReg = r(`^[-|\*|\+]\s(.*?)$`)
 )
 
-var header string =
-`<html>
-  <head>
-    <title>My Resume</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <meta charset="utf-8">
-    <meta name="description" content="resume">
-  </head>
-
-`
-var footer string =
-`</html>`
-
 func main() {
     if len(os.Args) < 2 {
         fmt.Println("Please specify a .md file to parse.")
@@ -61,17 +56,19 @@ func main() {
     reader  := bytes.NewReader(input)
     body    := md2html(reader)
 
-    file    := "index.html"
-    f, err  := os.Create(file)
-    defer f.Close()
-    checkError("Error creating index.html.", err)
+    // Slice .md extension from file & set as title
+    filename    := os.Args[1]
+    ext         := filepath.Ext(filename)
+    title       := filename[0:len(filename) - len(ext)]
 
-    // Loop through the html slice, writing to index.html
-    html := []string{header, body, footer}
-    for _, element := range html {
-        _, err = io.WriteString(f, element)
-        checkError("Error writing html to file.", err)
-    }
+    t := template.Must(template.ParseFiles("index.html"))
+    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+        data := Webpage{ Title: title, Body: template.HTML(body) }
+        err := t.Execute(w, data)
+        checkError("Error parsing template", err)
+    })
+    fmt.Println("Server listening on port 8080")
+    http.ListenAndServe(":8080", nil)
 }
 
 // Transpile markdown to html
