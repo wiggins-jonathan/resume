@@ -36,6 +36,19 @@ var (
     unorderedListReg = r(`^[-|\*|\+]\s(.*?)$`)
 )
 
+var header string =
+`<html>
+  <head>
+    <title>My Resume</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <meta name="description" content="resume">
+  </head>
+
+`
+var footer string =
+`</html>`
+
 func main() {
     if len(os.Args) < 2 {
         fmt.Println("Please specify a .md file to parse.")
@@ -46,15 +59,19 @@ func main() {
     checkError("Error reading .md file.", err)
 
     reader  := bytes.NewReader(input)
-    html    := md2html(reader)
+    body    := md2html(reader)
 
     file    := "index.html"
     f, err  := os.Create(file)
     defer f.Close()
     checkError("Error creating index.html.", err)
 
-    _, err = io.WriteString(f, html)
-    checkError("Error writing html to file.", err)
+    // Loop through the html slice, writing to index.html
+    html := []string{header, body, footer}
+    for _, element := range html {
+        _, err = io.WriteString(f, element)
+        checkError("Error writing html to file.", err)
+    }
 }
 
 // Transpile markdown to html
