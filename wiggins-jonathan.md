@@ -4,8 +4,6 @@
 [wiggins.jonathan@gmail.com](mailto:wiggins.jonathan@gmail.com)<br>
 [https://github.com/wiggins-jonathan](https://github.com/wiggins-jonathan)<br>
 
-621 N. 6th Ave. Unit 5<br>
-Phoenix, AZ 85003<br>
 480-264-0077<br>
 
 ---

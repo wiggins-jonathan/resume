@@ -60,6 +60,7 @@ func main() {
     filename    := os.Args[1]
     ext         := filepath.Ext(filename)
     title       := filename[0:len(filename) - len(ext)]
+    title       = fmt.Sprintf("%s résumé", title)
 
     t := template.Must(template.ParseFiles("index.html"))
     http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
