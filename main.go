@@ -63,9 +63,17 @@ func main() {
 
     t := template.Must(template.ParseFiles("index.html"))
     http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+        // Render templates
         data := Webpage{ Title: title, Body: template.HTML(body) }
         err := t.Execute(w, data)
         checkError("Error parsing template", err)
+    })
+    http.HandleFunc("/style.css", func(w http.ResponseWriter, r *http.Request) {
+        // Serve style.css
+        css, err := ioutil.ReadFile("style.css")
+        checkError("Cannot read style.css", err)
+        w.Header().Set("Content-Type", "text/css")
+        w.Write(css)
     })
     fmt.Println("Server listening on port 8080")
     http.ListenAndServe(":8080", nil)
