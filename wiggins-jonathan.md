@@ -9,8 +9,8 @@
 ---
 
 ### Skills & Languages
-**Virtualization & Containerization**: VirtualBox, VMWare, Docker, Kubernetes, & AWS.<br>
-**CI/CD**: Ansible, Puppet, Terraform, Gitlab CI/CD, Jenkins<br>
+**Virtualization & Containerization**: AWS, Docker, Kubernetes, VirtualBox, & VMWare.<br>
+**CI/CD**: Terraform, Packer, Ansible, Gitlab CI/CD, Puppet, Jenkins<br>
 **Coding Languages**: Go, Javascript, Python, Bash, Perl<br>
 **Frameworks**: React, Svelte, JQuery, Flask<br>
 **Data Analysis & Visualization**: Numpy, Pandas, Matplotlib, Grafana/Prometheus, Google Analytics.<br>
