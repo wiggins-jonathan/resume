@@ -35,8 +35,8 @@
 * Won 2 “Employee of the Month” awards in 2016. First employee to do so in a single year.
 
 **Upwork.com** _Software Contractor_ 2011-2013<br>
-* Created websites using Flask, html, css, Javascript, & PostgreSQL. Hosted with Docker & AWS.
-* Explored & visualized data using, Excel, VBA, Python, Pandas, & Matplotlib.
+* Created websites using Flask, html, css, Javascript, & PostgreSQL.
+* Explored & visualized data using, Excel, VBA, Python, Pandas, Numpy, & Matplotlib.
 * Unlocked, rooted, & modded Android & iOS devices for end-users using Linux, Magisk, & TWRP.
 
 ---
