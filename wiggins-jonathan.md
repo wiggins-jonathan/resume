@@ -21,9 +21,9 @@
 **State Farm** _Software Developer III_ 2018 - Present<br>
 * Part of the State Farm IaaS Cloud Solutions team in charge of building & maintaining custom solutions which automate & orchestrate complex tasks for enterprise business partners.
 * Use multiple programming languages, frameworks, & APIs to automate the creation, destruction, maintenance & upgrade of servers, containers, & virtualized systems.
-* My team routinely saves the company greater than 30 million dollars every year through automation.
+* My team routinely saves the company greater than $30MM every year through automation.
+* Developed a Go application that backs up entire legacy Pivotal Cloud Foundry foundations that are then moved wholesale to AWS.
 * Lead the modernization of a monolithic self-hosted web app from jquery & Perl to microservices in the cloud using React & Go.
-* Use kanban, agile, & scrum to coordinate work between team members & other teams.
 * Part of the Campus Recruit Team that recruits, interviews, & onboards interns from all three major AZ universities.
 
 **Ascend Learning** _Operations Analyst Lead_ 2014 - 2017<br>
